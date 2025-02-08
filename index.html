@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisch Script</title>
+    <style>
+        body {
+            background-color: blue;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .description {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .get-button {
+            margin-top: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            background-color: green;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .get-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">The best Fisch Script ever</div>
+    <div class="description">Inf money, inf XP, unlock all rods, unlock all boats, unlock all lanterns.</div>
+    
+    <div class="description" style="color: green;">Click to get script</div>
+    
+    <button class="get-button" onclick="redirectToVirus()">Get</button>
+
+    <script>
+        function redirectToVirus() {
+            window.location.href = "fake_virus_alert.html"; // Redirects to the fake virus alert page
+        }
+    </script>
+</body>
+</html>

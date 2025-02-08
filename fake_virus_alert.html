@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Attack Alert</title>
+    <style>
+        body {
+            background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6d5b1537-df04-4ffe-aad6-86bf81f0b50a/d7mg7wq-1b023a64-f18a-42f0-bf41-bbc88c8d3e27.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZkNWIxNTM3LWRmMDQtNGZmZS1hYWQ2LTg2YmY4MWYwYjUwYVwvZDdtZzd3cS0xYjAyM2E2NC1mMThhLTQyZjAtYmY0MS1iYmM4OGM4ZDNlMjcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.J6awBDf_slOTJW80qzYSMP4764rTzd7n3TjO15TjLi4') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            height: 100vh;
+        }
+        .warning {
+            display: none;
+            position: fixed;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: red;
+            bottom: 10px;
+            right: 10px;
+        }
+        .click-to-get {
+            display: none;
+            position: fixed;
+            font-size: 50px;
+            font-weight: bold;
+            color: red;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: glitch 0.1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .get-script {
+            display: none;
+            position: fixed;
+            font-size: 60px;
+            font-weight: bold;
+            color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            background: black;
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="warning" class="warning">⚠ Virus Attack Detected!</div>
+    <div id="clickToGet" class="click-to-get">Click to get script</div>
+    <div id="getScript" class="get-script" onclick="redirectToNewPage()">Get Script</div>
+    
+    <script>
+        function redirectToNewPage() {
+            window.location.href = "new_page.html";
+        }
+        
+        window.onload = function() {
+            document.getElementById('warning').style.display = 'block';
+            
+            setTimeout(() => {
+                document.getElementById('clickToGet').style.display = 'block';
+                document.getElementById('getScript').style.display = 'block';
+            }, 5000);
+        };
+    </script>
+</body>
+</html>
